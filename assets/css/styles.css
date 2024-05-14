@@ -195,15 +195,15 @@ a {
   top: 15px;
 }
 
-.images #img1{ 
+#img1{ 
 margin-left: 80px;
 margin-top: 30px;
 }
-.images #img2{
+#img2{
 margin-left: 30px;
 margin-bottom:300px ;
 }
-.images #img3{
+#img3{
 margin-left: -350px;
 margin-top: 330px;
 position: absolute;
