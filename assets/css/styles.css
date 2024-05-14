@@ -173,9 +173,11 @@ a {
 
 /*=============== MAIN ===============*/
 .main-container{
-  width: 160;
+  position: absolute;
+
+  width: 81em;
   height: 900px;
-  top: 0;
+  top: 417px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -189,10 +191,23 @@ a {
   color: white;
   position: relative;
   font-size: 45px;
-  left: 20px;
+  left: 79px;
   top: 15px;
 }
 
+.images #img1{ 
+margin-left: 80px;
+margin-top: 30px;
+}
+.images #img2{
+margin-left: 30px;
+margin-bottom:300px ;
+}
+.images #img3{
+margin-left: -350px;
+margin-top: 330px;
+position: absolute;
+}
 /*=============== BREAKPOINTS ===============*/
 
 /* For small devices */
