@@ -120,11 +120,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color .3s;
+    transition: color 0.4s,text-decoration 0.5s ;
   }
   .nav__link:hover {
-    background-color: var(--black-color-light);
+    color: #fec600;
   }
+
   /* Navigation for mobile devices */
   @media screen and (max-width: 425px) { /*1118px*/
     .nav__menu {
@@ -171,6 +172,8 @@
     transform: rotate(90deg);
   }
 
+
+/*=============== HOME START ===============*/
   /*=============== MAIN ===============*/
   .main-container{
     position: absolute;
@@ -184,7 +187,7 @@
   }
   .main-container h1{
     font-family: var(--second-body-font);
-    width: 10em;
+    width: 11em;
     font-weight: lighter;
     color: white;
     position: relative;
@@ -219,7 +222,6 @@
     width: 162px;
     height: auto;
     cursor: pointer;
-
   }
   #regular{
     margin-left: 15px;
@@ -240,7 +242,7 @@
   }
   .menu{
     width: 71em;
-    height: 400px;
+    height: 600px;
     background-color: #521300;
     margin-left: 80px;
   }
@@ -263,9 +265,324 @@
     margin-left: 70px;
     margin-top: 20px;
   }
+
+  .lemonyitoDD{
+    display: flex;
+    flex-direction: row;
+  }
+  .nyitoDD{
+    position:relative;
+    margin-left: 70px;
+    margin-top: 15px;
+    z-index: 1;   
+    display: inline-block
+    
+  }
+  .nyitoDD h3{
+    color: white;
+    font-weight: 400;
+    z-index: 2; 
+  }
+  #lemon{
+    position: absolute;
+    z-index: 3;
+  }
+  .dmenu {
+    background: transparent;
+    border: solid 3px #FE3C00;
+    width: 240px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    z-index: 10; 
+  }
+  .dmenu .fas{
+      transition: transform .3s;
+      color:#FE3C00;
+  }
+  .dmenu p {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;  
+  }
+  .social-lists {
+    background: #FE3C00;
+    width: 240px;
+    padding: 10px;
+    opacity: 0.9;
+    list-style-type: none;
+    border-radius: 5px;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    z-index: 5;
+    position: absolute;
+  }
+  .social-lists li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: padding 0.2s linear;
+    
+  }
+  .social-lists li:hover {
+    background: #bd2c00;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: rgb(255, 255, 255);
+  }
+  .social-lists li .fab {
+    margin: 0 10px;
+  }
+  .rotate .fas {
+    transform: rotate(180deg);
+  }
+  .hide {
+    visibility: hidden;
+  }
+  .hide {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .show {
+    max-height: 500px; 
+    padding: 10px 0;
+}
+
+#addons{
+  margin-left: 9px;
+}
+#addons-menu{
+  width: 150px;
+}
+#addons-list{
+  width: 150px;
+}
+#size{
+  margin-left: 9px;
+}
+#size-menu{
+  width: 125px;
+  padding-left: 1px;
+  padding-right: -1px;
+}
+#size-list{
+  width: 125px;
+}
+#qnty{
+  margin-left: 9px; 
+  z-index: 0; 
+}
+#qnty-menu{
+  width: 60px;
+  padding-left: 1px;
+  padding-right: -1px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  
+}
+#qnty-list{
+  width: 140px;
+  
+}
+
+#toppings{
+  z-index: 0;
+}
+#toppings h3{
+  z-index: 1;
+}
+#toppings-menu{
+  width: 240px;
+  z-index: 0;
+}
+#toppings-list{
+  width: 140px;
+  z-index: 5;
+}
+#qty{
+  position: relative;
+}
+#userInput::-webkit-outer-spin-button,
+#userInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#qnty-menu .incrementer #userInput:focus {
+  outline: none;
+}
+/* Style the input field */
+#userInput {
+  color: #ffffff; /* Change text color */
+  background-color: transparent; /* Change background color */
+  border-color: transparent;
+  width: 45px; /* Adjust width as needed */
+  height: 41px;
+  text-align: left; /* Center text */
+  font-size: 17px;
+  margin-left: 5px;
+  padding-top: 1px;
+
+}
+.incrementer button {
+  background-color: #FE3C00; /* Button background color */
+  position: absolute;
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+#increment{
+  left: 60px;
+  top: 28px;
+  padding: 4px 9px;
+}
+#decrement{
+  top: 52px;
+  left: 60px;
+  padding: 4px 10.5px;
+}
+/* Change button color on hover */
+.incrementer button:hover {
+  background-color: #bd2c00;
+}
+.add-cart{
+    background: #FE3C00;
+    color: white;
+    width: 140px;
+    border-radius: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+    z-index: 10; 
+    margin-left: 188px;
+    display: inline-block;
+}
+.add-cart.add-cart:hover{
+  background-color: #db3300;
+}
+
+.far {
+  margin: 1px;
+  transform: translateX(0);
+  transition: transform 0.2s;
+
+}
+.rating-container {
+  position: absolute;
+  background-color: transparent;
+  width: 290px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: -85px;
+  margin-left: 75px;
+  display: inline-block;
+}
+.rating-container h3{
+  display: inline-block;
+  color: white;
+  font-size: 35px;
+  margin-left: 60px;
+  font-weight: 400;
+}
+.rating-container p{
+  display: inline-block;
+  color: white;
+  margin-top: 20px;
+}
+#viewrev{
+  text-decoration:underline;
+  cursor: pointer;
+}
+#viewrev:hover{
+  color: #176ee0;
+}
+#review{
+margin-left: 75px;
+}
+
+  .fa-star {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  width: 30px;
+  height: auto;
+
+}
+.fa-star.active {
+  color: gold;
+}
+
+.line{
+  width: 2px;
+  height: 60px;
+  background-color: white;
+}
+
+footer {
+  width: auto;
+  background-color: #4c1707;
+  display: flex;
+  margin-top: 98em;
+  justify-content: center; /* Center the ul within the footer */
+  align-items: center;
+  list-style: none; 
+  padding: 1em 0; /* Adjust the padding as needed */
+}
+footer ul{
+  display: flex;
+}
+footer li{
+  margin: 0 3em; /* Adjust the margin between list items */
+}
+.footer__link {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Set the link color */
+}
+.footer__link:hover{
+  color: #e23500;
+  text-decoration: underline;
+}
+
+.footer__link u {
+  text-decoration: underline;
+}
+footer img{
+  margin-left: -40px;
+  margin-top: 5px;
+  
+}   
+.privacy{
+  text-align: center;
+}
+#copy{
+  color: white;
+  font-size: 13px;
+  padding-left: 13px;
+}
+#privacy{
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: white;
+  text-decoration: underline;
+}
+#privacy:hover{
+  color: #e23500;
+  cursor: pointer;
+}
+/*=============== HOME END ===============*/
+/*=============== LOCATION START ===============*/
   /*=============== BREAKPOINTS ===============*/
 
-  /* For small devices */
+  /* small devices */
   @media screen and (max-width: 340px) {
     .container {
       margin-inline: 1rem;

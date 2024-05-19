@@ -5,6 +5,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta property="og:image" content="assets/img/place.jpg" name="image">
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      />
       <link rel="stylesheet" href="assets/css/styles.css">
       <link rel="icon" href="assets/img/flavicon.png">
       <title>Manoy Celso Pancit Bato</title>
@@ -27,8 +34,8 @@
             <!--=============== NAV MENU ===============-->
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
-                  <li><a href="#" class="nav__link"><u>HOME</u></a></li>
-                  <li><a href="#" class="nav__link">HOURS & LOCATIONS</a></li>
+                  <li><a href="index.html" class="nav__link"><u>HOME</u></a></li>
+                  <li><a href="location.html" class="nav__link">HOURS & LOCATIONS</a></li>
                   <li><a href="#" class="nav__link">ABOUT</a></li>               
                   <li><a href="#" class="nav__link">CONTACT US</a></li>
                   <li><a href="#"><img src="assets/img/cart.png" alt="cart"></a></li>
@@ -37,7 +44,7 @@
          </nav>
       </header>
             <!--=============== MAIN ===============-->
-            <div class="main-container">
+         <div class="main-container">
                <h1>Authentic Pancit bato</h1>
                <div class="images">
                <img id="img1" src="assets/img/front_Img1.png" alt="img1">
@@ -58,11 +65,175 @@
                   <img src="assets/img/pointer.png" alt="" id="pointer"> 
                   <h1 id="name">PANCIT BATO REGULAR</h1>
                   <p style="color: #FE3C00; margin-left: 80px; margin-top: 45px;">______________________________________________</p>
-                  <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p class="desc" id="desc">Step up to our vibrant stall and savor the essence of Filipino cuisine with our classic Pancit Bato. Originating from Bicolandia, this dish features tender chicken, crisp vegetables, and thin noodles, all tossed in a savory blend of soy sauce, calamansi, and garlic. What sets ours apart is the addition of river stones from the Bicol region, infusing the dish with a unique earthy flavor. Topped with fresh scallions and a squeeze of calamansi, each bite is a harmonious blend of textures and tastes, inviting you to experience the warmth and authenticity of Filipino street food culture in every mouthful.</p>
                   <img id="prev" src="assets/img/regular_prev.png" alt="">
-
-               </div>                        
+                  <p style="color: #FE3C00; margin-left: 70px; margin-top: 30px;">_________________________________________________________________________________________</p>
+                  <div class="nyitoDD">
+                     <h3>Lemonyito<img src="assets/img/Lemonyito.png" id="lemon"></h4>
+                     <div class="dmenu">
+                        <p style="color: rgb(255, 255, 255);">N/A</p>
+                        <i class ="fas fa-angle-down"></i>
+                     </div>
+                     <ul class="social-lists hide">
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(255, 208, 0)"></i>
+                           <p>Lemon</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(200, 255, 0)"></i>
+                           <p>Mango Lemon</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(255, 8, 0)"></i>
+                           <p>Straberry Lemon</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(12, 12, 241)"></i>
+                           <p>Blueberries Lemon</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(255, 218, 169)"></i>
+                           <p>Lychee Lemon</p>
+                        </li>
+                        <li>
+                           <i class="fa-regular fa-circle" style=" color: rgb(255, 218, 169)"></i>
+                           <p>N/A</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="nyitoDD" id="addons">
+                     <h3>Adds-Ons</h3>
+                     <div class="dmenu" id="addons-menu">
+                        <p style="color: rgb(255, 255, 255);">N/A</p>
+                        <i class="fas fa-angle-down"></i>
+                     </div>
+                     <ul class="social-lists hide" id="addons-list">
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: #edc273"></i>
+                           <p>Yakult</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: #e38799"></i>
+                           <p>Yogurt</p>
+                        </li>
+                        <li>
+                           <i class="fa-regular fa-circle" style=" color: rgb(255, 218, 169)"></i>
+                           <p>N/A</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="nyitoDD" id="size">
+                     <h3>Size</h3>
+                     <div class="dmenu" id="size-menu">
+                        <p style="color: rgb(255, 255, 255);">N/A</p>
+                        <i class="fas fa-angle-down" id="arrow"></i>
+                     </div>
+                     <ul class="social-lists hide" id="size-list">
+                        <li>
+                           <i class="fa-solid fa-droplet" style="color: #a9b6f0;"></i>
+                           <p>12oz</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-droplet" style="color: #a9b6f0;" ></i>
+                           <p>16oz</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-droplet" style="color: #a9b6f0;"></i>
+                           <p>22oz</p>
+                        </li>
+                        <li>
+                           <i class="fa-regular fa-circle" style=" color: rgb(255, 218, 169)"></i>
+                           <p>N/A</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="nyitoDD" id="qnty">
+                     <h3>Qty</h3>
+                     <div class="dmenu" id="qnty-menu">
+                        <div class="incrementer">
+                           <input type="number" id="userInput" value="0" min="0">
+                           <button id="decrement" class="decrement">-</button>
+                           <button id="increment" class="increment">+</button>
+                        </div>
+                        </div>
+                  </div>
+                  <p style="color: #FE3C00; margin-left: 70px; margin-top:10px;  cursor: default; pointer-events: none;">_________________________________________________________________________________________</p>
+                  <div class="nyitoDD" id="toppings">
+                     <h3>Add- Toppings</h4>
+                     <div class="dmenu" id="toppings-menu">
+                        <p style="color: rgb(255, 255, 255);">N/A</p>
+                        <i class ="fas fa-angle-down"></i>
+                     </div>
+                     <ul class="social-lists hide" id="toppings-size">
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(241, 201, 21)"></i>
+                           <p>Siomai</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(255, 187, 0)"></i>
+                           <p>Shanghai</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(255, 255, 255)"></i>
+                           <p>Egg</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(37, 35, 31)"></i>
+                           <p>Dinuguan</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(173, 85, 3)"></i>
+                           <p>Lechon Kawali</p>
+                        </li>
+                        <li>
+                           <i class="fa-solid fa-circle" style="color: rgb(224, 165, 0)"></i>
+                           <p>Chicaron Bulaklak</p>
+                        </li>
+                        <li>
+                           <i class="fa-regular fa-circle" style=" color: rgb(255, 218, 169)"></i>
+                           <p>N/A</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="nyitoDD" id="qnty">
+                     <h3>Qty</h3>
+                     <div class="dmenu" id="qnty-menu">
+                        <div class="incrementer">
+                           <input type="number" id="userInput" value="0" min="0">
+                           <button id="decrement" class="decrement">-</button>
+                           <button id="increment" class="increment">+</button>
+                        </div>
+                        </div>
+                  </div>
+                  <div class="add-cart">ADD TO CART</div>
+                  
+                     <div class="rating-container">
+                     <i class="fas fa-star fa-2x active"></i>
+                     <i class="fas fa-star fa-2x"></i>
+                     <i class="fas fa-star fa-2x"></i>
+                     <i class="fas fa-star fa-2x"></i>
+                     <i class="fas fa-star fa-2x"></i>
+                     <h3 class="rating">4.5</h3>
+                     <p id="viewrev">View Reviews</p>
+                     <p id="review">1,435 Review</p>
+                     </div>
+               </div>
+         </div>
+         <footer>
+            <img src="assets/img/footer-logo.png" alt="">
+            <div class="line"></div>
+               <ul>
+                  <li><a href="index.html" class="footer__link">HOME</a></li>
+                  <li><a href="location.html" class="footer__link">HOURS & LOCATIONS</a></li>
+                  <li><a href="#" class="footer__link">ABOUT</a></li>               
+                  <li><a href="#" class="footer__link">CONTACT US</a></li>
+               </ul>
+            <div class="line"></div>
+            <div class="privacy">
+               <p id="copy">Copyright © 2024 Manoy Ceslo Pancit Bato</p>
+               <p id="privacy">Privacy Link</p>
             </div>
+         </footer>
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
    </body>
