@@ -746,8 +746,8 @@
       .main-container-contact{
         position: absolute;
         width: 81em;
-        height: 900px;
-        top: 417px;
+        height: 300px;  
+        top: 0;
         bottom: 0;
         left: 0;
         right: 0;
@@ -765,7 +765,7 @@
         margin-bottom: 30px;
       }
       #contact-footer{
-        margin-top: 70em;
+        margin-top: 50em;
       }
 
             
@@ -871,6 +871,69 @@ form {
   }
   #success-msg {
   transition-delay: 3s;
+  }
+
+  .socials{
+    margin-top: -37em;
+    margin-left: 54em;
+    color: white;
+    justify-content:space-between;
+    width: 19em;
+    
+  }
+  .socials h1{
+    font-family: var(--second-body-font);
+    font-weight:100;
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  .socials i{
+    font-size: 30px;
+    padding-right:20px ;
+    cursor: pointer;
+    transition: color 0.5s;
+  }
+  .socials i:hover{
+    color: #fec600;
+  }
+  .socials p{
+    transition: color 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+  .socials p:hover{
+    color: #fec600;
+  }
+  .facebook{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    align-items: baseline;
+    align-content:center;
+  }
+  .tiktok{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    align-items: baseline;
+    align-content: center;
+    border-top: 1px solid #d3d3d3;
+  }
+  .tiktok p{
+    margin-left: 7px;
+  }
+  .youtube{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    align-items: baseline;
+    align-content: center;
+    border-bottom: 1px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
+  }
+  .youtube p{
+    margin-left: 3px;
   }
 
 
