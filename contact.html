@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="assets/img/place.jpg" name="image">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/flavicon.png">
+    <title>Manoy Celso Pancit Bato | Contact</title>
+    </head>
+    <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/MC_Logo1.png" id="logo1" >
+                <img src="assets/img/Manoy-Celso.png" id="logo2">
+            </a>    
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line nav__burger"></i>
+                <i class="ri-close-line nav__close"></i>
+            </div>
+            </div>
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">HOME</a></li>
+                <li><a href="location.html" class="nav__link">HOURS & LOCATIONS</a></li>
+                <li><a href="about.html" class="nav__link">ABOUT</a></li>               
+                <li><a href="contact.html" class="nav__link"><u>CONTACT US</u></a></li>
+                <li><a href="#"><img src="assets/img/cart.png" alt="cart"></a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+            <!--=============== MAIN ===============-->
+            <div class="main-container-contact">
+                <div class="contact-container">
+                    <div class="left-col">
+                    </div>
+                    <div class="right-col">
+                        <h1 id="h1">Contact us</h1>  
+                            <form id="contact-form" method="post">
+                            <label id="label" for="name">Full Name</label>
+                            <input id="input" type="text" id="name" name="name" placeholder="Your Full Name" required>
+                            <label id="label" label for="email">Email Address</label>
+                            <input id="input" type="email" id="email" name="email" placeholder="Your Email Address" required>
+                            <label id="label" for="message">Message</label>
+                            <textarea id="textarea" rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
+                            <button id="button" type="submit" id="submit" name="submit">Send</button>
+                        </form>
+                        <div id="error"></div>
+                        <div id="success-msg"></div>
+                    </div>
+                </div>
+                <div class="socials">
+                    <h1>socials</h1>
+                    <div class="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>Facebook</p>
+                    </div>
+                    <div class="facebook">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <p>Tiktok</p>
+                    </div>
+                    <div class="tiktok">
+                        <i class="fa-brands fa-youtube"></i>
+                        <p>Youtube</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <footer id="contact-footer">
+                <img src="assets/img/footer-logo.png" alt="">
+                <div class="line"></div>
+                    <ul>
+                        <li><a href="index.html" class="footer__link">HOME</a></li>
+                        <li><a href="location.html" class="footer__link">HOURS & LOCATIONS</a></li>
+                        <li><a href="about.html" class="footer__link">ABOUT</a></li>               
+                        <li><a href="contact.html" class="footer__link">CONTACT US</a></li>
+                    </ul>
+                <div class="line"></div>
+                <div class="privacy">
+                    <p id="copy">Copyright © 2024 Manoy Ceslo Pancit Bato</p>
+                    <p id="privacy">Privacy Link</p>
+                </div>
+            </footer>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

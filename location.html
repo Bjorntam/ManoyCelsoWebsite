@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:image" content="assets/img/place.jpg" name="image">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="assets/img/flavicon.png">
-    <title>Manoy Celso Pancit Bato</title>
+    <title>Manoy Celso Pancit Bato | Location</title>
     </head>
     <body>
     <!--=============== HEADER ===============-->
     <header class="header">
         <nav class="nav container">
             <div class="nav__data">
-            <a href="#" class="nav__logo">
+            <a href="index.html" class="nav__logo">
                 <img src="assets/img/MC_Logo1.png" id="logo1" >
                 <img src="assets/img/Manoy-Celso.png" id="logo2">
             </a>    
@@ -28,22 +35,50 @@
             <ul class="nav__list">
                 <li><a href="index.html" class="nav__link">HOME</a></li>
                 <li><a href="location.html" class="nav__link"><u>HOURS & LOCATIONS</u></a></li>
-                <li><a href="#" class="nav__link">ABOUT</a></li>               
-                <li><a href="#" class="nav__link">CONTACT US</a></li>
+                <li><a href="about.html" class="nav__link">ABOUT</a></li>               
+                <li><a href="contact.html" class="nav__link">CONTACT US</a></li>
                 <li><a href="#"><img src="assets/img/cart.png" alt="cart"></a></li>
             </ul>
             </div>
         </nav>
     </header>
             <!--=============== MAIN ===============-->
-            <div class="main-container">
-                <h1>HOURS AND LOCATION</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.20994856107316!2d120.96441331126884!3d14.692268979441064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b5ea50e66f05%3A0x8686dd150d1f51c2!2sManoy%20Celso%20Authentic%20Pansit%20Bato!5e0!3m2!1sen!2sph!4v1715767407389!5m2!1sen!2sph"
-                width="1100px" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="footer">
-                footer
-            </div>                     
+            <div class="main-container-location">
+                <h1>HOURS & LOCATION</h1>
+                <div class="HandL">
+                    <div class="hours"><i class="fa-regular fa-clock"></i>
+                        <p>Monday - Sunday 2:00PM to 9:30PM</p>
+                    </div>
+                    <div class="line" id="locline"></div>
+                    <div class="location">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <p id="loc">11 gov.i at SM Talipapa Malinta Valenzuela City likod Ng petron gasoline station Malinta beside police Station 4 , Valenzuela, Philippines, 1440</p>
+                    </div>
+                </div>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.20994856107316!2d120.96441331126884!3d14.692268979441064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b5ea50e66f05%3A0x8686dd150d1f51c2!2sManoy%20Celso%20Authentic%20Pansit%20Bato!5e0!3m2!1sen!2sph!4v1715767407389!5m2!1sen!2sph"
+                width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+                
+
             </div>
+
+
+
+            <footer id="location-footer">
+                <a href="index.html"><img src="assets/img/footer-logo.png" alt=""></a>
+                <div class="line"></div>
+                    <ul>
+                        <li><a href="index.html" class="footer__link">HOME</a></li>
+                        <li><a href="location.html" class="footer__link">HOURS & LOCATIONS</a></li>
+                        <li><a href="about.html" class="footer__link">ABOUT</a></li>               
+                        <li><a href="contact.html" class="footer__link">CONTACT US</a></li>
+                    </ul>
+                <div class="line"></div>
+                <div class="privacy">
+                    <p id="copy">Copyright © 2024 Manoy Ceslo Pancit Bato</p>
+                    <p id="privacy">Privacy Link</p>
+                </div>
+            </footer>
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 </body>
