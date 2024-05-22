@@ -6,7 +6,7 @@
       --header-height: 3.5rem;
       /*========== Colors ==========*/
       /*Color mode HSL(hue, saturation, lightness)*/
-      --black-color: hsl(14, 100%, 50%); 
+      --black-color: hsl(14, 100%, 55%); 
       --black-color-light: hsl(220, 24%, 15%);
       --black-color-lighten: hsl(220, 20%, 18%);
       --white-color: #fff;
@@ -39,6 +39,8 @@
       font-family: var(--body-font);
       font-size: var(--normal-font-size);
       background-color: var(--body-color);
+      height: 600px;
+
     }
     ul {
       list-style: none;
@@ -176,14 +178,14 @@
   /*=============== HOME START ===============*/
     /*=============== MAIN ===============*/
     .main-container{
-      position: absolute;
-      width: 81em;
-      height: 900px;
-      top: 417px;
+      position: relative;
+      width: auto;
+      height: 110em;
+      top: 60px;
       bottom: 0;
       left: 0;
       right: 0;
-      margin: auto;
+      margin: 0 auto;
     }
     .main-container h1{
       font-family: var(--second-body-font);
@@ -192,12 +194,14 @@
       color: white;
       position: relative;
       font-size: 50px;
-      left: 79px;
+      left: 150px;
       top: 15px;
     }
-    #img1{ 
-    margin-left: 80px;
-    margin-top: 30px;
+    .images{
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
     }
     #img2{
     margin-left: 30px;
@@ -206,22 +210,31 @@
     #img3{
     margin-left: -350px;
     margin-top: 330px;
-    position: absolute;
     }
     .img_container{
-      margin-left: 80px;
+      border-left: solid 40px var(--body-color);
+      border-right: solid 40px var(--body-color);
       margin-top: 25px;
-      width: 71em;
-      height: 162px;
+      width: 100%;
+      height: 160px;
       background-color: #FE3C00;
-      overflow:visible;
-      overflow: hidden;
+      white-space: nowrap; 
+      overflow-x: auto;
+      overflow:auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .img_container > * {
+      max-height: 100%; 
+      max-width: 100%; 
     }
     .img_container img{
       margin-right: -5px;
-      width: 162px;
+      width: 160px; 
       height: auto;
       cursor: pointer;
+      justify-content: center;
     }
     #regular{
       margin-left: 15px;
@@ -235,37 +248,67 @@
       height: auto;
     }
     #pointer{
-      position: absolute;
-      left: 156px;
-      bottom: -28px;
+      height: 19px;
+      width: 32px;
+      left: 106px;
+      top: 70px;
+      position: relative;
       transition: left 0.5s ease;
     }
+    .menu-container{
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction:column;
+    }
     .menu{
-      width: 71em;
-      height: 600px;
+      border-left: solid 40px var(--body-color);
+      border-right: solid 40px var(--body-color);
+      width: 100%;
+      height: 650px;
       background-color: #521300;
-      margin-left: 80px;
     }
     .menu h1{
       top: 50px;
       font-size: 30px;
       width: 585px;
+      left: 80px;
       font-weight:500;
-      transition:opacity 2s ease;
+    
     }
     #prev{
-      position: absolute;
-      left: 52em;
-      top: 60em;
+      position: relative;
+      float:right;
+      bottom: 260px;
+      right: 85px;
+      
     }
+    .fade-in {
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+    .fade-out {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    #line-name{
+      background-color: #FE3C00;
+      height: 1.5px;
+      width: 339px;
+      margin-left: 80px;
+      margin-top: 60px;
+      transition: width 0.5s ease;
+      
+    }
+
     .desc{
       color: white;
       width: 40em;
       text-align: justify;
       margin-left: 70px;
       margin-top: 20px;
-    }
-
+    }    
     .lemonyitoDD{
       display: flex;
       flex-direction: row;
@@ -469,22 +512,13 @@
   .add-cart.add-cart:hover{
     background-color: #db3300;
   }
-
-  .far {
-    margin: 1px;
-    transform: translateX(0);
-    transition: transform 0.2s;
-
-  }
   .rating-container {
-    position: absolute;
-    background-color: transparent;
-    width: 290px;
-    height: 50px;
-    border-radius: 10px;
-    margin-top: -85px;
-    margin-left: 75px;
-    display: inline-block;
+    position: relative;
+    float:right;
+    width:290px;
+    height:50px;
+    top: 5em;
+    left: 15em;
   }
   .rating-container h3{
     display: inline-block;
@@ -508,13 +542,11 @@
   #review{
   margin-left: 75px;
   }
-
     .fa-star {
     color: rgb(255, 255, 255);
     cursor: pointer;
     width: 30px;
     height: auto;
-
   }
   .fa-star.active {
     color: gold;
@@ -527,10 +559,10 @@
   }
 
   footer {
+    position: relative;
     width: auto;
     background-color: #4c1707;
     display: flex;
-    margin-top: 98em;
     justify-content: center; /* Center the ul within the footer */
     align-items: center;
     list-style: none; 
@@ -582,10 +614,10 @@
   /*=============== LOCATION START ===============*/
 
   .main-container-location{
-    position: absolute;
+    position: relative;
     width: 81em;
     height: 900px;
-    top: 417px;
+    top: 90px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -651,16 +683,16 @@
     
   }
   #location-footer{
-    margin-top: 60em;
+    margin-top: 14em;
   }
 
   /*=============== LOCATION END ===============*/
     /*=============== ABOUT START ===============*/
     .main-container-about{
-      position: absolute;
+      position: relative;
       width: 81em;
-      height: 900px;
-      top: 417px;
+      height: 113em;
+      top: 45px;
       bottom: 0;
       left: 0;
       right: 0;
@@ -739,15 +771,15 @@
     }
 
     #about-footer{
-      margin-top: 107em;
+      position: relative;
     }
       /*=============== ABOUT END ===============*/
       /*=============== CONTACT START ===============*/
       .main-container-contact{
-        position: absolute;
-        width: 81em;
-        height: 300px;  
-        top: 0;
+        position: static;
+        width: auto;
+        height: 80vh;  
+        top: 5em;
         bottom: 0;
         left: 0;
         right: 0;
@@ -755,38 +787,34 @@
       }
       .main-container-contact h1{
         font-family: var(--second-body-font);
-        width: 11em;
         font-weight: lighter;
         color: white;
         position: relative;
         font-size: 50px;
-        left: 79px;
         top: 15px;
         margin-bottom: 30px;
       }
       #contact-footer{
-        margin-top: 50em;
+        display: flex;
       }
 
             
 .contact-container {
   margin-top: 30px;
   display: flex;
-  width: 90vw;
-  height: 100vh;
+  margin-left: 90px;
+  width: 10px;
+  height: 10em;
   background: var(--bg-color);
 }
 
-.left-col {
-  width: 5vw;
-  height: 100%;
-
-}
 
 .right-col {
-  width: 50vw;
-  height: 100vh;
-  padding: 5rem 3.5rem;
+  position: relative;
+  top: 40px;
+  left: 80px;
+  width: auto;
+  height: 10em;
 }
 
 
@@ -814,8 +842,9 @@ form {
 }
 
 #input, #textarea, #label {
-  width: 40vw;
+  width: 100%;
   display: block;
+
 }
 
 
@@ -874,18 +903,22 @@ form {
   }
 
   .socials{
-    margin-top: -37em;
-    margin-left: 54em;
+    margin-left: 90px;
+    margin-top: 40px;
     color: white;
     justify-content:space-between;
     width: 19em;
+    position: relative;
     
   }
   .socials h1{
     font-family: var(--second-body-font);
-    font-weight:100;
-    font-size: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 27px;
+    color:white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
   }
   .socials i{
     font-size: 30px;
@@ -925,7 +958,7 @@ form {
   }
   .youtube{
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 90px;
     display: flex;
     align-items: baseline;
     align-content: center;
