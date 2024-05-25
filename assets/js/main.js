@@ -59,7 +59,9 @@ function changer(page){
 function changeItem(name,desc,pointer,img,line) {
        document.getElementById('pointer').style.left=pointer;
        document.getElementById('name').innerText = name;
-       document.getElementById("line-name").style.width = line;
+       if (window.innerWidth > 713) {
+              document.getElementById("line-name").style.width = line;
+       }
        document.getElementById('desc').innerText = desc;
        document.getElementById('prev').src=img;
 }
