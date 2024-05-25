@@ -47,7 +47,18 @@
          <div class="main-container">
                <h1>Authentic Pancit bato</h1>
                <div class="images">
-               <img id="img1" src="assets/img/front_Img1.png" alt="img1">
+                  <div class="slider-container">
+                     <div class="image-container">
+                        <img  src="assets/img/front_Img1.png"   alt="img1">
+                        <img  src="assets/img/front_Img1-2.png" alt="img1-2">
+                        <img  src="assets/img/front_Img1-3.png" alt="img1-3">
+                        <img  src="assets/img/front_Img1-4.png" alt="img1-4">
+                        <img  src="assets/img/front_Img1-5.png" alt="img1-5">
+                        <img  src="assets/img/front_Img1-6.png" alt="img1-6">
+                     </div>
+                     <i id="btn-prev" class="fas fa-angle-double-left btn prev"></i>
+                     <i id="btn-next" class="fas fa-angle-double-right btn next"></i>
+                  </div>
                <img id="img2" src="assets/img/front_Img2.png" alt="img2">
                <img id="img3" src="assets/img/front_Img3.png" alt="img3">
                </div>
@@ -69,7 +80,7 @@
                   <div id="line-name"></div>
                   <p class="desc" id="desc">Step up to our vibrant stall and savor the essence of Filipino cuisine with our classic Pancit Bato. Originating from Bicolandia, this dish features tender chicken, crisp vegetables, and thin noodles, all tossed in a savory blend of soy sauce, calamansi, and garlic. What sets ours apart is the addition of river stones from the Bicol region, infusing the dish with a unique earthy flavor. Topped with fresh scallions and a squeeze of calamansi, each bite is a harmonious blend of textures and tastes, inviting you to experience the warmth and authenticity of Filipino street food culture in every mouthful.<br><br></p>
                   <img id="prev" src="assets/img/regular_prev.png" alt="">
-                  <div class="rating-container">
+                  <div class="rating-container" id="rating">
                      <i class="fas fa-star fa-2x active"></i>
                      <i class="fas fa-star fa-2x"></i>
                      <i class="fas fa-star fa-2x"></i>
@@ -79,8 +90,8 @@
                      <p id="viewrev">Edit Review</p>
                      <p id="review">1,435 Reviews</p>
                      </div>
-                  <p style="color: #FE3C00; margin-left: 70px; margin-top: 30px;">_________________________________________________________________________________________</p>
-                  <div class="nyitoDD">
+                  <p id="line" style="color: #FE3C00; margin-left: 70px; margin-top: 30px;">_________________________________________________________________________________________</p>
+                  <div class="nyitoDD" id="nyito">
                      <h3>Lemonyito<img src="assets/img/Lemonyito.png" id="lemon"></h4>
                      <div class="dmenu">
                         <p style="color: rgb(255, 255, 255);">N/A</p>
@@ -169,7 +180,7 @@
                         </div>
                         </div>
                   </div>
-                  <p style="color: #FE3C00; margin-left: 70px; margin-top:10px;  cursor: default; pointer-events: none;">_________________________________________________________________________________________</p>
+                  <p id="line" style="color: #FE3C00; margin-left: 70px; margin-top:10px;  cursor: default; pointer-events: none;">_________________________________________________________________________________________</p>
                   <div class="nyitoDD" id="toppings">
                      <h3>Add- Toppings</h4>
                      <div class="dmenu" id="toppings-menu">
@@ -217,9 +228,7 @@
                         </div>
                         </div>
                   </div>
-                  <div class="add-cart">ADD TO CART</div>
-                  
-                     
+                  <div class="add-cart"id="cart">ADD TO CART</div>
                </div>
             </div>
          </div>

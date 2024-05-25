@@ -25,7 +25,7 @@ function changer(page){
                      ,"Savor a unique and delectable fusion with our Pancit Bato with Chicharon Bulaklak! we combine the beloved Bicolandia Pancit Bato with the crispy, savory goodness of Chicharon Bulaklak. Imagine tender chicken, fresh vegetables, and thin noodles, all tossed in a flavorful blend of soy sauce, calamansi, and garlic. Topping this delightful mix are crispy, golden pieces of Chicharon Bulaklak, adding a satisfying crunch and rich flavor. Each bite is a harmonious blend of textures and tastes, celebrating the rich culinary heritage of the Philippines in every mouthful.\n\n\n"
                      ,"Indulge in the ultimate Filipino culinary experience with our Pancit Bato Overload! This sumptuous dish brings together the rich flavors of Bicolandia's Pancit Bato with an extravagant array of toppings. Enjoy tender chicken, fresh vegetables, and thin noodles, all expertly tossed in a savory blend of soy sauce, calamansi, and garlic. This feast is then topped with a delectable combination of hard-boiled egg, succulent siomai, crispy Shanghai rolls, savory Dinuguan, crunchy Lechon Kawali, and the irresistible Chicharon Bulaklak. Every bite is a burst of flavor and texture, celebrating the very best of Filipino cuisine in one generous, mouthwatering plate.\n\n"];
               
-                     const elements = document.querySelectorAll('#name, #desc, #prev');
+                     const elements = document.querySelectorAll('#name, #desc, #prev, #testing, #rating,#line,#nyito,#addons,#size,#qnty,#toppings,#cart');
 
                      // Add fade-out class to elements
                      elements.forEach(element => {
@@ -106,7 +106,8 @@ document.addEventListener("DOMContentLoaded", function() {
        userInput.stepDown();
               });
        } else {
-              console.error("Some elements not found in the container:", container);
+              // console.error("Some elements not found in the container:", container);
+              console.log("walang laman tbh");
        }
        }
        // Get all quantity incrementor containers
@@ -207,4 +208,65 @@ const emailIsValid = email => {
        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-submitBtn.addEventListener('click', validate);
+
+document.addEventListener("DOMContentLoaded", () => {
+       const nextEl = document.querySelector(".next");
+       const prevEl = document.querySelector(".prev");
+       const imgsEl = document.querySelectorAll(".image-container img");
+       const imageContainerEl = document.querySelector(".image-container");
+
+       let currentImg = 1;
+       let timeout;
+
+       // Clone first and last images
+       const firstClone = imgsEl[0].cloneNode(true);
+       const lastClone = imgsEl[imgsEl.length - 1].cloneNode(true);
+       firstClone.id = 'first-clone';
+       lastClone.id = 'last-clone';
+
+       imageContainerEl.appendChild(firstClone);
+       imageContainerEl.insertBefore(lastClone, imgsEl[0]);
+
+       const allImgs = document.querySelectorAll(".image-container img");
+
+       function updateImg() {
+              imageContainerEl.style.transition = 'transform 0.4s ease-in-out';
+              imageContainerEl.style.transform = `translateX(-${currentImg * 750}px)`;
+
+              timeout = setTimeout(() => {
+                     currentImg++;
+                     updateImg();
+              }, 7500);
+       }
+
+       nextEl.addEventListener("click", () => {
+              if (currentImg >= allImgs.length - 1) return;
+              currentImg++;
+              clearTimeout(timeout);
+              updateImg();
+       });
+
+       prevEl.addEventListener("click", () => {
+              if (currentImg <= 0) return;
+              currentImg--;
+              clearTimeout(timeout);
+              updateImg();
+       });
+
+       imageContainerEl.addEventListener('transitionend', () => {
+              if (allImgs[currentImg].id === firstClone.id) {
+                     imageContainerEl.style.transition = 'none';
+                     currentImg = 1;
+                     imageContainerEl.style.transform = `translateX(-${currentImg * 750}px)`;
+              }
+
+              if (allImgs[currentImg].id === lastClone.id) {
+                     imageContainerEl.style.transition = 'none';
+                     currentImg = imgsEl.length;
+                     imageContainerEl.style.transform = `translateX(-${currentImg * 750}px)`;
+              }
+       });
+
+       // Initial call to start the automatic sliding
+       updateImg();
+});
