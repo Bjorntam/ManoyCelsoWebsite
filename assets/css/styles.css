@@ -441,6 +441,7 @@
 
   #addons{
     margin-left: 9px;
+    z-index: 0;
   }
   #addons-menu{
     width: 150px;
@@ -450,6 +451,7 @@
   }
   #size{
     margin-left: 9px;
+    z-index: 0;
   }
   #size-menu{
     width: 125px;
@@ -1091,7 +1093,7 @@ form {
       .nav__list{
         z-index: 2;
       }
-      #cart{
+      #menu-cart{
         margin: 0;
         padding-bottom: 10px;
         padding-left: 14px;
@@ -1115,7 +1117,7 @@ form {
         display:none;
       }
       .menu h1{
-        width: auto;
+        width: 95%;
         left: 10px;
       }
       .desc{
@@ -1130,12 +1132,27 @@ form {
       }
       #prev{
         float:none;
-        left: 0;
+        left: 40px;
+        top: 10px;
         right: 0;
         bottom: 20px;
       }
       .img_container{
         border: 0;
+        margin-top: 25px;
+        width: 100%;
+        height: 160;
+        background-color: #FE3C00;
+        overflow:scroll;
+        display:inline-block;
+        
+      }
+      #pointer{
+      top: 0px;
+      display: none;
+      }
+      #regular{
+        margin-left: 0px;
       }
       .menu{
         height: auto;
@@ -1148,10 +1165,57 @@ form {
         display: none;
       }
       .rating-container{
-        
         float: none;
-        left: 30px;
+        left: 75px;
         top: 0px;
+      }
+      #nyito{
+        margin-left: 20px;
+        margin-top: 80px;
+        z-index: 3;
+      }
+      .dmenu{
+        width: 355px;
+      }
+      .social-lists{
+        width: 355px;
+      }
+      #addons{
+        margin-left: 20px;
+        z-index: 2;
+      }
+      #size{
+        margin-left:5px;
+        margin-top: 20px;
+        z-index: 2;
+      }
+      #qnty{
+      margin-left: 5px;
+      }
+      #qnty-menu{
+        height: 46px;
+      }
+      #increment{
+        top: 25px;
+      }
+      #decrement{
+        top:50px;
+      }
+      #toppings{
+      margin-left: 20px;
+      
+      }
+      #toppings-menu{
+        width: 230px;
+        z-index: 0;
+      }
+      #toppings-size{
+        width: 230px;
+      }
+      #cart{
+        margin-top: 45px;
+        margin-left: 140px;
+        margin-bottom: 80px;
       }
       /*=============== MAIN CONTAINER END   ===============*/
 
