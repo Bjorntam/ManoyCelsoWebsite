@@ -5,14 +5,12 @@
     :root {
       --header-height: 3.5rem;
       /*========== Colors ==========*/
-      /*Color mode HSL(hue, saturation, lightness)*/
       --black-color: hsl(14, 100%, 55%); 
       --black-color-light: hsl(220, 24%, 15%);
       --black-color-lighten: hsl(220, 20%, 18%);
       --white-color: #fff;
       --body-color: hsl(14, 100%, 27%);
       /*========== Font and typography ==========*/
-      /*.5rem = 8px | 1rem = 16px ...*/
       --body-font: "Inter", sans-serif;
       --second-body-font: "Playfair Display",serif; 
       --normal-font-size: .938rem;
@@ -40,12 +38,9 @@
       font-size: var(--normal-font-size);
       background-color: var(--body-color);
       height: 600px;
-
     }
     ul {
       list-style: none;
-      /* Color highlighting when pressed on mobile devices */
-      /*-webkit-tap-highlight-color: transparent;*/
     }
     a {
       text-decoration: none;
@@ -85,8 +80,6 @@
       align-items: center;
       column-gap: .25rem;
       font-weight: var(--font-semi-bold);
-      /* Color highlighting when pressed on mobile devices */
-      /*-webkit-tap-highlight-color: transparent;*/
     }
     .nav__logo i {
       font-weight: initial;
@@ -128,8 +121,8 @@
       color: #fec600;
     }
 
-    /* Navigation for mobile devices */
-    @media screen and (max-width: 768px) { /*1118px*/
+    /*====Navigation for mobile devices====*/
+    @media screen and (max-width: 768px) {
       .nav__menu {
         position: absolute;
         left: 0;
@@ -148,7 +141,6 @@
         background-color: var(--black-color);
         padding-top: 1rem;
       }
-
       .nav__logo #logo1{
         width: 60px;
         height: auto;
@@ -503,23 +495,23 @@
   #qnty-menu .incrementer #userInput:focus {
     outline: none;
   }
-  /* Style the input field */
+  
   #userInput {
-    color: #ffffff; /* Change text color */
-    background-color: transparent; /* Change background color */
+    color: #ffffff;
+    background-color: transparent;
     border-color: transparent;
-    width: 45px; /* Adjust width as needed */
+    width: 45px;
     height: 41px;
-    text-align: left; /* Center text */
+    text-align: left; 
     font-size: 17px;
     margin-left: 5px;
     padding-top: 1px;
 
   }
   .incrementer button {
-    background-color: #FE3C00; /* Button background color */
+    background-color: #FE3C00; 
     position: absolute;
-    color: #fff; /* Button text color */
+    color: #fff; 
     border: none;
     cursor: pointer;
     margin: 0 5px;
@@ -535,7 +527,6 @@
     left: 60px;
     padding: 4px 10.5px;
   }
-  /* Change button color on hover */
   .incrementer button:hover {
     background-color: #bd2c00;
   }
@@ -609,17 +600,17 @@
     width: auto;
     background-color: #4c1707;
     display: flex;
-    justify-content: center; /* Center the ul within the footer */
+    justify-content: center; 
     align-items: center;
     list-style: none; 
-    padding: 1em 0; /* Adjust the padding as needed */
+    padding: 1em 0; 
 
   }
   footer ul{
     display: flex;
   }
   footer li{
-    margin: 0 3em; /* Adjust the margin between list items */
+    margin: 0 3em; 
   }
   .footer__link {
     text-decoration: none; 
@@ -726,9 +717,6 @@
   #locline{
     margin-top: 14px;
     height: 190px;
-  }
-  .map{
-    
   }
   #location-footer{
     margin-top: 14em;

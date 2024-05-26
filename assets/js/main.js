@@ -2,16 +2,11 @@
 const showMenu = (toggleId, navId) =>{
 const toggle = document.getElementById(toggleId),
 nav = document.getElementById(navId)
-
 toggle.addEventListener('click', () =>{
-       // Add show-menu class to nav menu
 nav.classList.toggle('show-menu')
-
-       // Add show-icon to show and hide the menu icon
 toggle.classList.toggle('show-icon')
 })
 }
-
 showMenu('nav-toggle','nav-menu')
 
 /*=============== Toggle Menu ===============*/
@@ -26,8 +21,6 @@ function changer(page){
                      ,"Indulge in the ultimate Filipino culinary experience with our Pancit Bato Overload! This sumptuous dish brings together the rich flavors of Bicolandia's Pancit Bato with an extravagant array of toppings. Enjoy tender chicken, fresh vegetables, and thin noodles, all expertly tossed in a savory blend of soy sauce, calamansi, and garlic. This feast is then topped with a delectable combination of hard-boiled egg, succulent siomai, crispy Shanghai rolls, savory Dinuguan, crunchy Lechon Kawali, and the irresistible Chicharon Bulaklak. Every bite is a burst of flavor and texture, celebrating the very best of Filipino cuisine in one generous, mouthwatering plate.\n\n"];
               
                      const elements = document.querySelectorAll('#name, #desc, #prev, #testing, #rating,#line,#nyito,#addons,#size,#qnty,#toppings,#cart');
-
-                     // Add fade-out class to elements
                      elements.forEach(element => {
                      element.classList.remove('fade-in');
                      element.classList.add('fade-out');
@@ -95,7 +88,7 @@ document.querySelectorAll('.nyitoDD').forEach(dropdown => {
 
 /*===========COUNTER===========*/
 document.addEventListener("DOMContentLoaded", function() {
-       // Function to handle quantity incrementor
+
        function initializeIncrementor(container) {
        var userInput = container.querySelector("input[type='number']");
        var incrementButton = container.querySelector(".increment");
@@ -108,13 +101,10 @@ document.addEventListener("DOMContentLoaded", function() {
        userInput.stepDown();
               });
        } else {
-              // console.error("Some elements not found in the container:", container);
               console.log("walang laman tbh");
        }
        }
-       // Get all quantity incrementor containers
        var incrementorContainers = document.querySelectorAll(".nyitoDD");
-       // Loop through each container and initialize the incrementor
        incrementorContainers.forEach(function(container) {
        initializeIncrementor(container);
        });
@@ -220,7 +210,6 @@ document.addEventListener("DOMContentLoaded", () => {
        let currentImg = 1;
        let timeout;
 
-       // Image sources for desktop and mobile
        const desktopImageSources = [
               'assets/img/front_Img1.jpg',
               'assets/img/front_Img1-2.jpg',
@@ -239,12 +228,10 @@ document.addEventListener("DOMContentLoaded", () => {
               'assets/img/mobile-front-Img1-6.jpg'
        ];
 
-        // Transform sizes for desktop and mobile
        const desktopTransformSize = 750;
        const mobileTransformSize = 320;
        let currentTransformSize = desktopTransformSize;
 
-       // Clone first and last images
        const firstClone = imgsEl[0].cloneNode(true);
        const lastClone = imgsEl[imgsEl.length - 1].cloneNode(true);
        firstClone.id = 'first-clone';
@@ -304,7 +291,6 @@ document.addEventListener("DOMContentLoaded", () => {
               }
        }
        });
-       // Function to update image sources based on viewport width
        function updateImageSources() {
               const isMobile = window.innerWidth <= 425;
               const newImageSources = isMobile ? mobileImageSources : desktopImageSources;
@@ -313,12 +299,9 @@ document.addEventListener("DOMContentLoaded", () => {
               });
        }
 
-       // Add event listener for window resize
        window.addEventListener('resize', updateImageSources);
 
-       // Initial call to set correct images on page load
        updateImageSources();
 
-       // Initial call to start the automatic sliding
        updateImg();
 });
