@@ -222,12 +222,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
        // Image sources for desktop and mobile
        const desktopImageSources = [
-              'assets/img/front_Img1.png',
-              'assets/img/front_Img1-2.png',
+              'assets/img/front_Img1.jpg',
+              'assets/img/front_Img1-2.jpg',
               'assets/img/front_Img1-3.png',
-              'assets/img/front_Img1-4.png',
-              'assets/img/front_Img1-5.png',
-              'assets/img/front_Img1-6.png'
+              'assets/img/front_Img1-4.jpg',
+              'assets/img/front_Img1-5.jpg',
+              'assets/img/front_Img1-6.jpg'
        ];
 
        const mobileImageSources = [
