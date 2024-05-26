@@ -1218,13 +1218,169 @@ form {
         margin-bottom: 80px;
       }
       /*=============== MAIN CONTAINER END   ===============*/
+      /*=============== MOBILE LOCATION START   ===============*/
+      .main-container-location{
+        width: auto;
+        height: auto;
+      }
+      .main-container-location h1{
+        width: auto;
+        font-size: 25px;
+        left: 0;
+        text-align: center;
+      }
+      .HandL{
+        flex-direction: column;
+        height: auto;
+      }
+      .hours{
+        padding-left: 100px;
+        position: relative;
+        
+      }
+      .hours p{
+        margin-left: 37px;
+        
+      }
+      .hours i{
+        margin-top: 20px;
+      }
+      #locline{
+      width: auto;
+      height: 2px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      background-color: #691900;
+      }
+      .map{  
+        position: relative;
+      }
+      .location{
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-bottom: 50px;
+      }
+      .location p{
+        width: auto;
+      }
+      #location-footer{
+        margin-top: 10em;
+      }
+      /*=============== MOBILE LOCATION END   ===============*/
+      /*=============== MOBILE ABOUT START   ===============*/
+      .main-container-about{
+        width: auto;
+        height: auto;
+      }
+      .main-container-about h1{
+        width: auto;
+        left: 0;
+        font-size: 40px;
+        margin-left: 30px;
+        margin-top: 20px;
+      }
+      #manoy{
+        width: auto;
+        margin-left: 10px;
+        font-size: 30px;
+      }
+      #place-prev{
+        width: 425px;
+        height: auto;
+        margin-left: 0;
+      }
+      #place-desc{
+        position: relative;
+        margin-top: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: auto;
+        left: 0;
+        top: 0;
+      }
+      #arcel{
+        width: auto;
+        position: relative;
+        left: 0;
+        top: 0;
+        font-size: 30px;
+        margin-top: 30px;
+      }
+      #manoy-prev-1{
+        display: none;
+      }
+      #manoy-prev-2{
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 425px;
+        height: auto;
+      }
+      #ln{
+        display: none;
+      }
+      #manoy-desc{
+        position: relative;
+        width: auto;
+        left: 0;
+        top: 0;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      #video{
+        width: 425px;
+        height: auto;
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 80px;
+      }
+      /*=============== MOBILE ABOUT END   ===============*/
+      /*=============== MOBILE CONTACT START   ===============*/
+      .main-container-contact{
+        height: auto;
+      }
+      #h1{
+        margin-left: 20px;
+        margin-top: 30px;
+      }
+      .contact-container{
+        width: auto;
+        height: auto;
+        margin-left: 0;
+        flex-direction: column;
+      }
+      .right-col{
+        top: 0;
+        left: 0;
+        height: auto;
+      }
+      #contact-form{
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .socials{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 0;
+        margin-bottom: 50px;
+        width: auto;
+      }
+      .youtube{
+        padding-top: 20px;
+        
+      }
+
+
+
+      /*=============== MOBILE CONTACT END   ===============*/
+
+
 
     }
-
-
-
-
-
     /* For large devices */
     @media screen and (min-width: 769px) /*1118px*/ {
       .container {
@@ -1253,4 +1409,5 @@ form {
       .nav__link:hover {
         background-color: transparent;
       }
+      
     }

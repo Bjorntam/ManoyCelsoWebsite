@@ -220,6 +220,30 @@ document.addEventListener("DOMContentLoaded", () => {
        let currentImg = 1;
        let timeout;
 
+       // Image sources for desktop and mobile
+       const desktopImageSources = [
+              'assets/img/front_Img1.png',
+              'assets/img/front_Img1-2.png',
+              'assets/img/front_Img1-3.png',
+              'assets/img/front_Img1-4.png',
+              'assets/img/front_Img1-5.png',
+              'assets/img/front_Img1-6.png'
+       ];
+
+       const mobileImageSources = [
+              'assets/img/mobile-front-Img1.jpg',
+              'assets/img/mobile-front-Img1-2.jpg',
+              'assets/img/mobile-front-Img1-3.jpg',
+              'assets/img/mobile-front-Img1-4.jpg',
+              'assets/img/mobile-front-Img1-5.jpg',
+              'assets/img/mobile-front-Img1-6.jpg'
+       ];
+
+        // Transform sizes for desktop and mobile
+       const desktopTransformSize = 750;
+       const mobileTransformSize = 320;
+       let currentTransformSize = desktopTransformSize;
+
        // Clone first and last images
        const firstClone = imgsEl[0].cloneNode(true);
        const lastClone = imgsEl[imgsEl.length - 1].cloneNode(true);
@@ -233,12 +257,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
        function updateImg() {
               imageContainerEl.style.transition = 'transform 0.4s ease-in-out';
-              imageContainerEl.style.transform = `translateX(-${currentImg * 750}px)`;
+              if (window.innerWidth<=425) {
+                     imageContainerEl.style.transform = `translateX(-${currentImg * 425}px)`;
+              } else {
+                     imageContainerEl.style.transform = `translateX(-${currentImg * 750}px)`;
+              }
+       
 
               timeout = setTimeout(() => {
-                     currentImg++;
-                     updateImg();
-              }, 7500);
+              currentImg++;
+              updateImg();
+       }, 7500);
        }
 
        nextEl.addEventListener("click", () => {
@@ -256,18 +285,39 @@ document.addEventListener("DOMContentLoaded", () => {
        });
 
        imageContainerEl.addEventListener('transitionend', () => {
-              if (allImgs[currentImg].id === firstClone.id) {
-                     imageContainerEl.style.transition = 'none';
-                     currentImg = 1;
+       if (allImgs[currentImg].id === firstClone.id) {
+              imageContainerEl.style.transition = 'none';
+              currentImg = 1;
+              if (window.innerWidth<=425) {
+                     imageContainerEl.style.transform = `translateX(-${currentImg * 425}px)`;
+              } else {
                      imageContainerEl.style.transform = `translateX(-${currentImg * 750}px)`;
               }
-
-              if (allImgs[currentImg].id === lastClone.id) {
-                     imageContainerEl.style.transition = 'none';
-                     currentImg = imgsEl.length;
+       }   
+       if (allImgs[currentImg].id === lastClone.id) {
+              imageContainerEl.style.transition = 'none';
+              currentImg = imgsEl.length;
+              if (window.innerWidth<=425) {
+                     imageContainerEl.style.transform = `translateX(-${currentImg * 425}px)`;
+              } else {
                      imageContainerEl.style.transform = `translateX(-${currentImg * 750}px)`;
               }
+       }
        });
+       // Function to update image sources based on viewport width
+       function updateImageSources() {
+              const isMobile = window.innerWidth <= 425;
+              const newImageSources = isMobile ? mobileImageSources : desktopImageSources;
+              allImgs.forEach((img, index) => {
+                     img.src = newImageSources[index % newImageSources.length];
+              });
+       }
+
+       // Add event listener for window resize
+       window.addEventListener('resize', updateImageSources);
+
+       // Initial call to set correct images on page load
+       updateImageSources();
 
        // Initial call to start the automatic sliding
        updateImg();
