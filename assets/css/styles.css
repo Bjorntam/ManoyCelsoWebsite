@@ -1065,9 +1065,9 @@ form {
 
     /*=============== PRIVACY END ===============*/
     /*=============== BREAKPOINTS ===============*/
-
-
-    /* small devices */
+    /*small devices*/
+    
+    /* medium devices */
     @media screen and (max-width: 425px) {
       
       /*=============== MAIN START ===============*/
@@ -1195,6 +1195,10 @@ form {
       #qnty-menu{
         height: 46px;
       }
+      .incrementer{
+        position: relative;
+        overflow: hidden;
+      }
       #increment{
         top: 25px;
       }
@@ -1234,12 +1238,14 @@ form {
         height: auto;
       }
       .hours{
-        padding-left: 100px;
+        padding-left: 120px;
+        padding-right: 120px;
         position: relative;
         
       }
       .hours p{
-        margin-left: 37px;
+      
+        width: auto;
         
       }
       .hours i{
@@ -1285,7 +1291,7 @@ form {
         font-size: 30px;
       }
       #place-prev{
-        width: 425px;
+        width: 100%;;
         height: auto;
         margin-left: 0;
       }
@@ -1313,7 +1319,7 @@ form {
         position: relative;
         left: 0;
         top: 0;
-        width: 425px;
+        width: 100%;;
         height: auto;
       }
       #ln{
@@ -1331,7 +1337,7 @@ form {
         margin-right: 15px;
       }
       #video{
-        width: 425px;
+        width: 100%;
         height: auto;
         margin-left: 0;
         margin-top: 10px;
@@ -1381,6 +1387,34 @@ form {
 
 
     }
+
+    @media screen and (max-width:375px) {
+      #increment{
+        display: none;
+      }
+      #decrement{
+        display: none;
+      }
+      #prev{
+        left: 7px;
+      }
+      .rating-container{
+        left: 45px;
+      }
+      #nyito{
+        margin-left: 10px;
+      }
+      #addons{
+        margin-left: 10px;
+      }
+      #toppings{
+        margin-left: 10px;
+      }
+      #cart{
+        margin-left: 115px;
+      }
+
+      }
     /* For large devices */
     @media screen and (min-width: 769px) /*1118px*/ {
       .container {
