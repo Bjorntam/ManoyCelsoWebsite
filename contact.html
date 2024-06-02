@@ -47,15 +47,32 @@
                 <div class="contact-container">
                     <div class="right-col">
                         <h1 id="h1">Contact us</h1>  
-                            <form id="contact-form" method="post">
+                        <form action="https://api.web3forms.com/submit" id="contact-form" method="post">
+                            <input type="hidden" name="access_key" value="fb6bb471-3d31-4ad0-b785-752bdc49b525">
                             <label id="label" for="name">Full Name</label>
                             <input id="input" type="text" id="name" name="name" placeholder="Your Full Name" required>
                             <label id="label" label for="email">Email Address</label>
                             <input id="input" type="email" id="email" name="email" placeholder="Your Email Address" required>
                             <label id="label" for="message">Message</label>
                             <textarea id="textarea" rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
+                            <div class="h-captcha" data-captcha="true"></div>
                             <button id="button" type="submit" id="submit" name="submit">Send</button>
                         </form>
+                        <script>
+                            const form = document.getElementById('contact-form');
+                            
+                            form.addEventListener('submit', function(e) {
+                            
+                                const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+                            
+                                if (!hCaptcha) {
+                                    e.preventDefault();
+                                    alert("Please fill out captcha field")
+                                    return
+                                }
+                            });
+                            </script>
+                        <script src="https://web3forms.com/client/script.js" async defer></script>
                         <div id="error"></div>
                         <div id="success-msg"></div>
                     </div>
