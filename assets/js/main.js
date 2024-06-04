@@ -304,4 +304,11 @@ document.addEventListener("DOMContentLoaded", () => {
        updateImageSources();
 
        updateImg();
+
 });
+
+function submitForm() {
+       console.log("nagana toh tbh");
+       document.getElementById("input").value ="";
+       document.getElementById("inputs").value ="";
+}

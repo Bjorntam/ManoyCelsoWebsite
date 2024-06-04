@@ -13,7 +13,7 @@
     referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" href="assets/img/flavicon.png">
+    <link rel="icon" href="assets/img/MC_Logo1.png">
     <title>Manoy Celso Pancit Bato | Contact</title>
     </head>
     <body>
@@ -50,29 +50,53 @@
                         <form action="https://api.web3forms.com/submit" id="contact-form" method="post">
                             <input type="hidden" name="access_key" value="fb6bb471-3d31-4ad0-b785-752bdc49b525">
                             <label id="label" for="name">Full Name</label>
-                            <input id="input" type="text" id="name" name="name" placeholder="Your Full Name" required>
+                            <input id="input" type="text" id="names" name="name" placeholder="Your Full Name" required>
                             <label id="label" label for="email">Email Address</label>
                             <input id="input" type="email" id="email" name="email" placeholder="Your Email Address" required>
                             <label id="label" for="message">Message</label>
                             <textarea id="textarea" rows="6" placeholder="Your Message" id="message" name="message" required></textarea>
                             <div class="h-captcha" data-captcha="true"></div>
                             <button id="button" type="submit" id="submit" name="submit">Send</button>
+                            <a href="privacy-policy.html"><p id="privacy">Privacy Link</p></a>
                         </form>
                         <script>
                             const form = document.getElementById('contact-form');
-                            
                             form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+    
+    if (!hCaptcha) {
+        alert("Please fill out captcha field");
+        return;
+    }
+
+    // Create FormData object from the form
+    const formData = new FormData(form);
+
+    // Send the form data using fetch
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("Form submitted successfully!");
+            form.reset(); // Reset the form after successful submission
+        } else {
+            alert("Error submitting form: " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("An error occurred while submitting the form.");
+    });
+});
                             
-                                const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-                            
-                                if (!hCaptcha) {
-                                    e.preventDefault();
-                                    alert("Please fill out captcha field")
-                                    return
-                                }
-                            });
                             </script>
-                        <script src="https://web3forms.com/client/script.js" async defer></script>
+                        <script src="https://web3forms.com/client/script.js" async defer>
+                        </script>
                         <div id="error"></div>
                         <div id="success-msg"></div>
                     </div>
@@ -89,6 +113,10 @@
                         <div class="youtube">
                             <i class="fa-brands fa-youtube"></i>
                             <a href="https://www.youtube.com/@toptv1million102" target="_blank"><p>Youtube</p></a>  
+                        </div>
+                        <div class="youtube">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+63 995 089 2876</p> 
                         </div>
                     </div>
                 </div>
@@ -109,7 +137,7 @@
                 <div class="line"></div>
                 <div class="privacy">
                     <p id="copy">Copyright © 2024 Manoy Ceslo Pancit Bato</p>
-                    <a href="privacy-policy.html"><p id="privacy">Privacy Link</p></a>
+                    <p id="dev">Ingemar Bjorn B Raymundo, Allen Arcila, Johnrey Esteria</p>
                 </div>
             </footer>
     <!--=============== MAIN JS ===============-->
